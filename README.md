@@ -1,42 +1,60 @@
-# NLP Lab 1 – Text Preprocessing and Word Frequency Analysis
+# Text Preprocessing Toolkit
+A Python-based Natural Language Processing (NLP) project exploring text preprocessing, linguistic normalization, and word frequency analysis using **NLTK** and **spaCy**.
 
-## Objective
-This lab demonstrates fundamental Natural Language Processing (NLP) preprocessing techniques using NLTK and spaCy, followed by word-frequency analysis.
+The project demonstrates how raw text can be transformed into structured, meaningful representations through fundamental NLP preprocessing techniques.
 
-## Tasks Covered
-### Task 1: Environment Setup
-- Install Python and the required Python libraries.
-- Download the NLTK tokenization and stopword resources.
-- Install the spaCy English language model (`en_core_web_sm`).
+## Overview
+Text preprocessing is an essential stage in Natural Language Processing. Raw text often contains inconsistent capitalization, punctuation, commonly occurring words, and variations of the same word.
 
-### Task 2: Text Preprocessing
-The notebook demonstrates:
-1. Tokenization
-2. Lowercasing
-3. Stopword removal
-4. Punctuation removal
-5. Stemming using NLTK's `PorterStemmer`
-6. Lemmatization using spaCy
+This project implements a preprocessing workflow to clean and normalize textual data before further analysis.
 
-### Task 3: Word Frequency Analysis
-- Preprocess a separate sample text.
-- Count the frequency of the remaining words.
-- Display the five most frequent words.
+## Features
+- **Tokenization:** Splits text into individual words or tokens.
+- **Lowercasing:** Converts text into lowercase for consistent processing.
+- **Stopword Removal:** Filters out common words that contribute limited meaning to the analysis.
+- **Punctuation Removal:** Removes punctuation marks from the text.
+- **Stemming:** Reduces words to their root forms using NLTK's Porter Stemmer.
+- **Lemmatization:** Converts words into their dictionary base forms using spaCy.
+- **Word Frequency Analysis:** Counts word occurrences and identifies the five most frequent words in a sample text.
 
-## Requirements
-- Python 3.7 or later
-- NLTK
-- spaCy
-- pandas
-- spaCy English model: `en_core_web_sm`
+## Technology Stack
+| Technology | Purpose |
+|---|---|
+| Python | Core programming language |
+| NLTK | Tokenization, stopword removal, stemming |
+| spaCy | Linguistic processing and lemmatization |
+| pandas | Data manipulation library |
+| Jupyter Notebook | Interactive development and execution |
 
-Install the Python packages:
+## Project Structure
+```text
+text-preprocessing-toolkit/
+│
+├── README.md
+├── requirements.txt
+└── text_preprocessing.ipynb
+```
 
+## Getting Started
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/SamyukthaTR/text-preprocessing-toolkit.git
+```
+
+Navigate into the project directory:
+
+```bash
+cd text-preprocessing-toolkit
+```
+
+### 2. Install dependencies
 ```bash
 python -m pip install -r requirements.txt
 ```
 
-Download the required NLTK resources and spaCy model. You can run these commands in VS Code's notebook cells:
+### 3. Download NLP resources
+Download the required NLTK resources:
 
 ```python
 import nltk
@@ -46,25 +64,52 @@ nltk.download("punkt_tab")
 nltk.download("stopwords")
 ```
 
-```python
-!python -m spacy download en_core_web_sm
+Download the spaCy English language model:
+
+```bash
+python -m spacy download en_core_web_sm
 ```
 
-## How to Run
-1. Clone or download this repository.
-2. Open the project folder in Visual Studio Code.
-3. Install the Python and Jupyter extensions if they are not already installed.
-4. Open `CB.PS.I5DAS23016_Lab1.ipynb`.
-5. Select the Python environment where the requirements are installed.
-6. Run the notebook cells from top to bottom.
+### 4. Run the notebook
+1. Open the project directory in Visual Studio Code.
+2. Ensure the Python and Jupyter extensions are installed.
+3. Select the Python environment containing the required dependencies.
+4. Open `text_preprocessing.ipynb`.
+5. Execute the notebook cells sequentially.
 
-## Repository Contents
-- `CB.PS.I5DAS23016_Lab1.ipynb` – Jupyter Notebook containing the lab implementation.
-- `nlp_lab1.py` – Python script exported from the notebook (if included).
-- `requirements.txt` – Python package dependencies.
+## Workflow
+The project follows a simple NLP preprocessing pipeline:
 
-## Note
-The text samples are used to demonstrate preprocessing and frequency analysis. Their inclusion does not imply independent verification of any factual claims they may contain.
+```text
+Raw Text
+   |
+   v
+Tokenization
+   |
+   v
+Lowercasing
+   |
+   v
+Punctuation Removal
+   |
+   v
+Stopword Removal
+   |
+   v
+Stemming and Lemmatization
+   |
+   v
+Word Frequency Analysis
+```
+
+## Learning Outcomes
+This project provides practical experience with:
+- Fundamental NLP preprocessing operations.
+- Text normalization using NLTK and spaCy.
+- Differences between stemming and lemmatization.
+- Identifying frequent terms in textual data.
+- Working with Python-based NLP libraries and Jupyter Notebooks.
 
 ## Author
-Samyuktha T R
+**Samyuktha T R**
+[GitHub Profile](https://github.com/SamyukthaTR)
